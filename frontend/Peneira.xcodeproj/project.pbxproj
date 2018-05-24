@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		579B963220B7448C0025494D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579B963120B7448C0025494D /* AppDelegate.swift */; };
-		579B963420B7448C0025494D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579B963320B7448C0025494D /* ViewController.swift */; };
 		579B963720B7448C0025494D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579B963520B7448C0025494D /* Main.storyboard */; };
 		579B963920B7448E0025494D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 579B963820B7448E0025494D /* Assets.xcassets */; };
 		579B963C20B7448E0025494D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579B963A20B7448E0025494D /* LaunchScreen.storyboard */; };
 		579B964420B745940025494D /* DeckTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579B964320B745940025494D /* DeckTableViewController.swift */; };
 		579B964620B747030025494D /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579B964520B747030025494D /* Controller.swift */; };
+		FC00F37A20B7501100E8944F /* Manufacturing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC00F37920B7501100E8944F /* Manufacturing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		579B962E20B7448C0025494D /* Peneira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peneira.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		579B963120B7448C0025494D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		579B963320B7448C0025494D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		579B963620B7448C0025494D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		579B963820B7448E0025494D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		579B963B20B7448E0025494D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		579B963D20B7448E0025494D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		579B964320B745940025494D /* DeckTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTableViewController.swift; sourceTree = "<group>"; };
 		579B964520B747030025494D /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		FC00F37920B7501100E8944F /* Manufacturing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Manufacturing.swift; path = ../../../../../Manufacturing/Manufacturing/Model/Manufacturing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +58,8 @@
 		579B963020B7448C0025494D /* Peneira */ = {
 			isa = PBXGroup;
 			children = (
+				FC00F37820B74FD800E8944F /* Model */,
 				579B963120B7448C0025494D /* AppDelegate.swift */,
-				579B963320B7448C0025494D /* ViewController.swift */,
 				579B963520B7448C0025494D /* Main.storyboard */,
 				579B964320B745940025494D /* DeckTableViewController.swift */,
 				579B964520B747030025494D /* Controller.swift */,
@@ -68,6 +68,14 @@
 				579B963D20B7448E0025494D /* Info.plist */,
 			);
 			path = Peneira;
+			sourceTree = "<group>";
+		};
+		FC00F37820B74FD800E8944F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC00F37920B7501100E8944F /* Manufacturing.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,8 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				579B964420B745940025494D /* DeckTableViewController.swift in Sources */,
-				579B963420B7448C0025494D /* ViewController.swift in Sources */,
 				579B963220B7448C0025494D /* AppDelegate.swift in Sources */,
+				FC00F37A20B7501100E8944F /* Manufacturing.swift in Sources */,
 				579B964620B747030025494D /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
