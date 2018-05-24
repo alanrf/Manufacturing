@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "description": "Peneira 1",
+    "vibration": 0.15,
+  },
+  {
+    "id": 2,
+    "description": "Peneira 2",
+    "vibration": 0.20,
+  },
+  {
+    "id": 3,
+    "description": "Peneira 3",
+    "value": 0.24,
+  },
+  {
+    "id": 4,
+    "description": "Peneira 4",
+    "value": 0.39,
+  },
+  {
+    "id": 5,
+    "description": "Peneira 5",
+    "value": 0.44,
+  },
+  {
+    "id": 6,
+    "description": "Peneira 6",
+    "value": 0.21,
+  },
+  {
+    "id": 7,
+    "description": "Peneira 7",
+    "value": 0.37,
+  },
+  {
+    "id": 8,
+    "description": "Peneira 8",
+    "value": 0.30,
+  },
+  {
+    "id": 9,
+    "description": "Peneira 9",
+    "value": 0.16,
+  },
+  {
+    "id": 10,
+    "description": "Peneira1",
+    "value": 0.45,
+  },
+]
