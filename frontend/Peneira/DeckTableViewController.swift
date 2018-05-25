@@ -6,18 +6,18 @@ class DeckTableViewController: UITableViewController {
     var sensors = [Sensor]()
     var currentOccurrence : Int = 0;
     var timer = Timer()
+    
     // Outlet
 
     // UI
-    func updateUI(with sensors: [Sensor]) {
+    func updateUI() {
         DispatchQueue.main.async {
-            self.sensors = sensors
             self.tableView.reloadData()
         }
     }
     
     func runTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 10, target:self, selector: #selector(DeckTableViewController.timerRequest), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 5, target:self, selector: #selector(DeckTableViewController.timerRequest), userInfo: nil, repeats: true)
     }
     
     @objc func timerRequest() {
@@ -29,9 +29,19 @@ class DeckTableViewController: UITableViewController {
         CheckController.shared.fetchSensorItems(occurrence: "\(currentOccurrence)")
         { (sensorItems) in
             if let sensorItems = sensorItems {
-                self.updateUI(with: sensorItems)
+                self.sensors = sensorItems
+                if !(self.isRessonance()){
+                    print("ok")
+                } else {
+                    self.timer.invalidate()
+                    print("Deu ruim")
+                }
+                self.updateUI()
             }
+    
         }
+        
+        
     }
     
     func configure(cell: UITableViewCell, forItemAt indexPath:
@@ -63,6 +73,23 @@ class DeckTableViewController: UITableViewController {
         configure(cell: cell, forItemAt: indexPath)
         
         return cell
+    }
+    
+    func isRessonance() -> Bool {
+
+//        if sensors.count > 0 {
+        
+            let tolerance = 0.05
+            let minValueVibration = sensors[0].vibration - tolerance
+            let maxValueVibration = sensors[0].vibration + tolerance
+            for currentSensor in sensors {
+                if (minValueVibration > currentSensor.vibration || maxValueVibration < currentSensor.vibration) {
+                    return false
+                }
+            }
+            return true
+//        }
+//        return false
     }
 
 }

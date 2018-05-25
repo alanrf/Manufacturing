@@ -9,6 +9,7 @@ class CheckController {
 
     func fetchSensorItems(occurrence: String, completion:
         @escaping ([Sensor]?) -> Void) {
+        
         let checkSensorsURL = baseURL.appendingPathComponent("check")
         var components = URLComponents(url: checkSensorsURL,
                                        resolvingAgainstBaseURL: true)!
