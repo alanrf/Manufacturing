@@ -13,6 +13,7 @@
 		579B963C20B7448E0025494D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579B963A20B7448E0025494D /* LaunchScreen.storyboard */; };
 		579B964420B745940025494D /* DeckTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579B964320B745940025494D /* DeckTableViewController.swift */; };
 		579B964620B747030025494D /* CheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579B964520B747030025494D /* CheckController.swift */; };
+		9375F7D520B87C2C001B3DF0 /* VibrationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375F7D420B87C2C001B3DF0 /* VibrationTableViewCell.swift */; };
 		FC00F37D20B754A900E8944F /* Manufacturing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC00F37C20B754A900E8944F /* Manufacturing.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		579B963D20B7448E0025494D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		579B964320B745940025494D /* DeckTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTableViewController.swift; sourceTree = "<group>"; };
 		579B964520B747030025494D /* CheckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckController.swift; sourceTree = "<group>"; };
+		9375F7D420B87C2C001B3DF0 /* VibrationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibrationTableViewCell.swift; sourceTree = "<group>"; };
 		FC00F37C20B754A900E8944F /* Manufacturing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manufacturing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 			children = (
 				FC00F37B20B7548B00E8944F /* Model */,
 				579B963120B7448C0025494D /* AppDelegate.swift */,
+				9375F7D420B87C2C001B3DF0 /* VibrationTableViewCell.swift */,
 				579B963520B7448C0025494D /* Main.storyboard */,
 				579B964320B745940025494D /* DeckTableViewController.swift */,
 				579B964520B747030025494D /* CheckController.swift */,
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9375F7D520B87C2C001B3DF0 /* VibrationTableViewCell.swift in Sources */,
 				579B964420B745940025494D /* DeckTableViewController.swift in Sources */,
 				579B963220B7448C0025494D /* AppDelegate.swift in Sources */,
 				FC00F37D20B754A900E8944F /* Manufacturing.swift in Sources */,
@@ -296,14 +300,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P23L989SE9;
 				INFOPLIST_FILE = Peneira/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = guilherme.caccaos.Peneira;
+				PRODUCT_BUNDLE_IDENTIFIER = Peneira;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -315,14 +320,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P23L989SE9;
 				INFOPLIST_FILE = Peneira/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = guilherme.caccaos.Peneira;
+				PRODUCT_BUNDLE_IDENTIFIER = Peneira;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
