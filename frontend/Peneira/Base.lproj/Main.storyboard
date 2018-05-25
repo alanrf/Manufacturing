@@ -12,13 +12,13 @@
         <!--Deck-->
         <scene sceneID="jgz-QD-Lbx">
             <objects>
-                <tableViewController id="LcS-ZA-EHs" sceneMemberID="viewController">
+                <tableViewController id="LcS-ZA-EHs" customClass="DeckTableViewController" customModule="Peneira" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1cD-1l-8gs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="khM-6H-oXO" detailTextLabel="HmJ-iP-62x" imageView="IaT-QF-5qd" style="IBUITableViewCellStyleValue1" id="vyy-2M-IhY">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sensorReuse" textLabel="khM-6H-oXO" detailTextLabel="HmJ-iP-62x" imageView="IaT-QF-5qd" style="IBUITableViewCellStyleValue1" id="vyy-2M-IhY">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vyy-2M-IhY" id="JCX-Mb-eHh">

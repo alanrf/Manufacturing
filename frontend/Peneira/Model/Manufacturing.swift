@@ -12,7 +12,9 @@ struct Sensor: Codable {
     var id: Int
     var description: String
     var vibration: Double
-    
+    var insideLimitOscillation: Bool {
+        return self.vibration >= 0.15 && self.vibration <= 0.45
+    }
     
     enum CodingKeys: String, CodingKey {
         case id

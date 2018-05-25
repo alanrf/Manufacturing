@@ -3768,9 +3768,11 @@ from os.path import abspath, join, commonprefix
 
 @route('/check')
 def category():
-	print(request.environ)
+	#print(request.environ)
 	#   -- regra para carregar outro arquivo
-	menu = json.load(open('sensors'+ request.query.ocurrence +'.json'))
+	fileNameToLoad = 'sensors'+ request.query.occurrence +'.json'
+	print(fileNameToLoad)
+	menu = json.load(open(fileNameToLoad))
 	return {
 		'sensors': [ item for item in menu ]
 	}
