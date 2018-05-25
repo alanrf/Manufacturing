@@ -7,9 +7,16 @@ class DeckTableViewController: UITableViewController {
     var currentOccurrence : Int = 0;
     var timer = Timer()
 
+    @IBOutlet weak var datetimeLabel: UILabel!
+    
     // UI
     func updateUI() {
         DispatchQueue.main.async {
+            let currentDate = NSDate()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy', 'HH:mm:ss"
+            dateFormatter.string(from: currentDate as Date)
+            self.datetimeLabel.text = "Atualizado em: \(dateFormatter.string(from: currentDate as Date))"
             self.tableView.reloadData()
         }
     }
@@ -75,9 +82,7 @@ class DeckTableViewController: UITableViewController {
     }
     
     func isRessonance() -> Bool {
-
-//        if sensors.count > 0 {
-        
+        if sensors.count > 0 {
             let tolerance = 0.05
             let minValueVibration = sensors[0].vibration - tolerance
             let maxValueVibration = sensors[0].vibration + tolerance
@@ -87,8 +92,8 @@ class DeckTableViewController: UITableViewController {
                 }
             }
             return true
-//        }
-//        return false
+        }
+        return false
     }
 
 }
