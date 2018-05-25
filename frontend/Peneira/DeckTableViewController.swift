@@ -6,8 +6,6 @@ class DeckTableViewController: UITableViewController {
     var sensors = [Sensor]()
     var currentOccurrence : Int = 0;
     var timer = Timer()
-    
-    // Outlet
 
     // UI
     func updateUI() {
@@ -31,27 +29,28 @@ class DeckTableViewController: UITableViewController {
             if let sensorItems = sensorItems {
                 self.sensors = sensorItems
                 if !(self.isRessonance()){
-                    print("ok")
                 } else {
                     self.timer.invalidate()
-                    print("Deu ruim")
+                    let alert = UIAlertController(title: "Deck em ressonância", message: "A vibração entre as peneiras apresenta uma variação de 0.05mm", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .cancel){ action in
+                        self.currentOccurrence = 0;
+                        self.runTimer()
+                    })
+                    self.present(alert, animated: true, completion: nil)
                 }
                 self.updateUI()
             }
-    
         }
-        
-        
     }
     
-    func configure(cell: UITableViewCell, forItemAt indexPath:
+    func configure(cell: VibrationTableViewCell, forItemAt indexPath:
         IndexPath) {
         let sensor = sensors[indexPath.row]
-        cell.textLabel?.text = sensor.description
-        cell.detailTextLabel?.text = String(format: "%.2f",
+        cell.descriptionLabel?.text = sensor.description
+        cell.vibrationLabel?.text = String(format: "%.2f",
                                             sensor.vibration)
         
-        cell.imageView?.image = sensor.insideLimitOscillation ? UIImage(named: "green") : UIImage(named: "red")
+        cell.statusImage?.image = sensor.insideLimitOscillation ? UIImage(named: "green") : UIImage(named: "red")
         
     }
     
@@ -69,7 +68,7 @@ class DeckTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "sensorReuse", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "sensorReuse", for: indexPath) as! VibrationTableViewCell
         configure(cell: cell, forItemAt: indexPath)
         
         return cell
