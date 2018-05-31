@@ -5,9 +5,9 @@ class CheckController {
     
     static let shared = CheckController()
     
-    //let baseURL = URL(string: "http://localhost:8090/")!
+    let baseURL = URL(string: "http://localhost:8090/")!
 //    let baseURL = URL(string: "http://192.168.43.186:8090")!
-    let baseURL = URL(string: "http://10.171.176.39:8090")!
+//    let baseURL = URL(string: "http://10.171.176.39:8090")!
 
     func fetchSensorItems(occurrence: String, completion:
         @escaping ([Sensor]?) -> Void) {
