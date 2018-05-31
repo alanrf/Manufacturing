@@ -1,6 +1,7 @@
 # Manufacturing
 Este projeto é composto de duas partes:
-- backend - Serviço que expoe via webservice (python) os dados fornecidos por cada medidor a ser analisado frontend - Aplicativo desenvolvido em swift para buscar os dados no webservice e exibir um dashboard na tela do smartphone.
+- backend - Serviço que expoe via webservice (python) os dados fornecidos por cada medidor a ser analisado
+- frontend - Aplicativo desenvolvido em swift para buscar os dados no webservice e exibir um dashboard na tela do smartphone.
 
 
 # Setup
