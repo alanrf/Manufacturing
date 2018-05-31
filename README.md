@@ -13,7 +13,7 @@ python Ressonance.py
 Abrir o projeto Peneira.xcodeproj no XCode.
 Executar ele em um simulador.
 
-## Para rodar o aplicativo em um dispositivo físico, alter nos seguintes lugares:
+## Para rodar o aplicativo em um dispositivo físico, alterar nos seguintes lugares:
 - alterar o arquivo "Ressonance.py" do backend para adicionar o IP externo da máquina
 - alterar no projeto "Peneira", no arquivo "CheckController" a baseURL para conter o endereço IP adicionado no passo anterior
 
